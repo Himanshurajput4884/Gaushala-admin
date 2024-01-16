@@ -1,19 +1,19 @@
-.gallery-container{
+.activity-container{
     height: auto;
     width: 100%;;
 }
 
-.gallery-heading{
+.activity-heading{
     display: flex;
     flex-direction: column;
     width: 100%;
     height: auto;
-    padding: 30px 0;
+    padding: 30px 10px;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.gallery-head1{
+.activity-head1{
     display: flex;
     flex: 2;
     width: 100%;
@@ -24,7 +24,7 @@
     color: rgb(19, 19, 50);
 }
 
-.gallery-head2{
+.activity-head2{
     flex: 1;
     width: 90%;
     text-align: justify;
@@ -35,38 +35,41 @@
     border-bottom: 4px solid rgb(4, 4, 42);
 }
 
-.gallery-outer-box{
-    height: 150px;
+
+.activity-outer-box{
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 20px;
+    flex-direction: column;
 }
 
-.gallery-form{
+.activity-form{
     border: 2px solid rgb(68, 60, 60);
     display: flex;
     border-radius: 20px;
-    flex-direction: row;
+    flex-direction: column;
     width: 70%;
-    padding: 10px 10px 16px 10px;
+    padding: 20px 20px 36px 36px;
     background-color: rgb(255, 255, 255);
     justify-content: space-between;
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.66);
 }
 
 
-.gallery-form input{
+.activity-form input{
     border: 1px solid gray;
     border-radius: 4px;
     padding: 8px;
-    width: 45%;
+    width: 40%;
     display: flex;
-    cursor: pointer;
     justify-content: center;
     align-items: center;
+    margin: 2px 0;
 }
 
-.gallery-form button{
+.activity-form button{
     padding: 4px 4px;
     display: flex;
     justify-content: center;
@@ -78,18 +81,18 @@
     background-color: rgb(71, 16, 16);
     color: white;
     transition: 0.3s ease;
-    width: 25%;
+    width: 20%;
     cursor: pointer;
     font-weight: 700;
 }
 
-.gallery-form button:hover{
+.activity-form button:hover{
     background-color: white;
     color: rgb(71,16,16);
     border: 2px solid rgb(71,16,16);
 }
 
-.gallery-content-show{
+.activity-content-show{
     height: auto;
     width: 100%;
     display: flex;
@@ -97,28 +100,29 @@
     align-items: center;
 }
 
-.gallery-content{
+.activity-content{
     height: auto;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     padding: 20px 20px;
+    justify-content: center;
 }
 
-.gallery-image-outer-card{
+.activity-blog-outer-card{
     height: auto;
-    width: 25%;
-    padding: 10px 10px;
+    padding: 4px 0;
+    width: 35%;
     border: 3px solid rgb(86, 86, 102);
     display: flex;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    margin: 4px 4px;
+    margin: 10px 10px;
+    /* border: 2px solid black; */
 }
 
-.gallery-image-inner-card{
+.activity-blog-inner-card{
     display: flex;
     height: 100%;
     width: 90%;
@@ -128,19 +132,38 @@
     padding: 10px 0 0 0;
 }
 
-
-.gallery-image-card-image img{
-    height: 230px;
-    width: 250px;
+.activity-blog-card-image{
+    height: 100%;
+    flex: 6;
 }
-.gallery-image-card-button{
+.activity-blog-card-image img{
+    height: 100%;
+    width: 100%;
+}
+.activity-blog-card-button{
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4px 0 4px 0;
 }
 
-.gallery-image-card-button button{
+.activity-blog-text-content{
+    border-bottom: 2px solid black;
+    width: 80%;
+    padding: 4px 0;
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 47, 47);
+}
+
+.activity-blog-card-button{
+    padding: 4px 0;
+}
+
+.activity-blog-card-button button{
     padding: 4px 15px;
     border: 3px solid rgb(64, 6, 6);
     color:white;
@@ -153,82 +176,71 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.gallery-image-card-button button:hover{
+.activity-blog-card-button button:hover{
     background-color:white;
     color: rgb(64, 6, 6);
 
 }
 
-@media (max-width:1500px){
-    .gallery-image-outer-card{
-        width: 40%;
-    }   
+@media (max-width:1300px){
+    .activity-blog-outer-card{
+        width: 45%;
+    }
 }
 
 @media (max-width:1000px){
-    .gallery-image-outer-card{
+    .activity-blog-outer-card{
         width: 70%;
-    }
-    .gallery-image-card-image img{
-        height: 280px;
-        width: 320px;
     }
 }
 
+
 @media (max-width:750px){
-    .gallery-image-outer-card{
-        width: 85%;
-    }
-    .gallery-form{
+    .activity-form{
         width: 90%;
+    }   
+    .activity-blog-outer-card{
+        width: 80%;
     }
-    .gallery-form button{
+    .activity-blog-text-content{
+        font-size: 12px;
+    }
+    .activity-blog-card-button button{
         font-size: 15px;
         font-weight: 400;
     }
 }
-@media (max-width:575px){
-    .gallery-image-outer-card{
-        width: 98%;
+
+@media (max-width:500px){
+    .activity-form{
+        padding: 10px 10px 20px 20px;
     }
-}
-@media (max-width:490px){
-    .gallery-image-outer-card{
-        width: 98%;
+    .activity-form input{
+        border: 1px solid gray;
+        border-radius: 4px;
+        padding: 4px;
+        width: 85%;
     }
-    .gallery-image-card-image img{
-        height: 220px;
-        width: 250px;
-    }
-    .gallery-content{
-        padding: 10px 10px;
-    }
-    .gallery-form button{
-        font-size: 12px;
-        font-weight: 200;
-    }
-}
-@media (max-width:400px){
-    .gallery-image-card-image img{
-        height: 190px;
-        width: 200px;
-    }
-    .gallery-content{
-        padding: 5px;
-    }
-    .gallery-image-card-button button{
-        font-size: 12px;
+    .activity-form button{
+        font-size: 13px;
         font-weight: 400;
     }
-    .gallery-form button{
-        font-size: 10px;
-        font-weight: 200;
+    .activity-blog-outer-card{
+        width: 97%;
     }
 }
 
-@media (max-width:310px){
-    .gallery-image-card-image img{
-        height: 160px;
-        width: 160px;
+@media (max-width:350px){
+    .activity-form button{
+        padding: 2px 2px;
+        font-size: 10px;
+        font-weight: 200;
+    }
+    .activity-form{
+        width: 97%;
+    }
+    .activity-blog-card-button button{
+        font-size: 12px;
+        font-weight: 200;
     }
 }

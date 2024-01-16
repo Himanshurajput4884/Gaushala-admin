@@ -55,6 +55,66 @@
     cursor: pointer;
 }
 
+.navbar-cont4{
+    flex: 0.5;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.side-navbar-btn{
+    margin: 0 20px 0 0;
+    cursor: pointer;
+    background-color: rgb(46, 27, 143);
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px 5px 5px;
+  }
+
+  .side-navbar-btn:hover{
+    background-color: rgb(39, 16, 157);
+  } 
+  
+  .side-navbar-btn span{
+    display: block;
+    margin-top: 2px;
+    background-color:white;
+    border-radius: 15px;
+    height: 5px;
+    width: 20px;
+    
+  }
+
+@media(min-width:701){
+    .navbar-links{
+        display: flex;
+    }
+    .navbar-cont4{
+        display: none;
+    }
+}
+
+@media(max-width:800px){
+    .navbar-heading{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:700px){
+    .navbar-cont4{
+        display: flex;
+    }
+    .navbar-links{
+        display: none;
+    }
+}
 
 
 
+@media (max-width:870px){
+    .navbar-heading{
+        font-size: 20px;
+    }
+}

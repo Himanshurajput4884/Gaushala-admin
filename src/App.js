@@ -7,11 +7,17 @@ import Activities from "./components/Activities/Activities";
 import Login from "./components/Login/Login";
 import axios from "axios";
 import NavBar from "./components/NavBar/NavBar";
+import SideNavBar from "./components/NavBar/prev-SideNavBar/SideNavbar.js";
 
 function App() {
+  const [sideNavBarExpanded, setSideNavBarExpanded] = useState(false);
   const [token, setToken] = useState("");
   const [isLogin, setIsLogin] = useState(false);
   const [loading, setLoading] = useState(true);
+
+  const toggleSideNavBar = () =>{
+    setSideNavBarExpanded(!sideNavBarExpanded);
+  }
 
   useEffect(() => {
     const VerifyToken = async () => {
@@ -29,7 +35,7 @@ function App() {
             Authorization: `Bearer ${storedToken}`,
           },
         });
-        console.log("Response: ", response);
+        // console.log("Response: ", response);
 
         if (
           response.status === 200 &&
@@ -70,7 +76,8 @@ function App() {
     <div>
       {isLogin ? (
         <>
-          <NavBar />
+          <NavBar toggleSideNavBar={toggleSideNavBar}/>
+          <SideNavBar isExpanded={sideNavBarExpanded} toggleSideNavBar={toggleSideNavBar}/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/gallery" element={<Gallery />} />

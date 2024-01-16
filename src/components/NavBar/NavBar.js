@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import {NavLink} from "react-router-dom";
 
-const NavBar = () =>{
+const NavBar = ({toggleSideNavBar}) =>{
     return (
         <div className="navbar-container">
             <div className="navbar-content">
@@ -16,6 +16,13 @@ const NavBar = () =>{
                     <div className="navbar-items"><NavLink to="/activity" className="navbar-links-navlink"> Activity </NavLink></div>
                     </div>
                 </div>
+            <div className="navbar-cont4">
+                <button onClick={toggleSideNavBar} className="side-navbar-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
             </div>
         </div>  
     )

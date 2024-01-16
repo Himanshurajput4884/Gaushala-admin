@@ -88,3 +88,23 @@
     color: rgb(71,16,16);
     border: 2px solid rgb(71,16,16);
 }
+
+@media (max-width:800px){
+    .login-section{
+        height: 60%;
+        width: 80%;
+        /* border: 2px solid rgb(70, 70, 84); */
+        border-radius: 30px;
+    }
+    .login-actual-heading{
+        font-size: 40px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:500px){
+    .login-form{
+        width: 90%;
+        height: 60%;
+    }
+}

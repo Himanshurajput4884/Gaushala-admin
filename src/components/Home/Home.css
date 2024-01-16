@@ -3,19 +3,21 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     background-color: rgb(238, 238, 245);
 }
 
 .home-content{
-    height: 80%;
-    width: 70%;
+    height: 500px;
+    padding: 80px 0 0 0;
+    width: 90%;
     display: flex;
     justify-content: center;
+    /* border: 2px solid black; */
 }
 
 .home-content-box{
-    height: 40%;
+    height: auto;
     width: 80%;
     background-color:rgba(255, 255, 255, 0.66);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.66);
@@ -30,4 +32,11 @@
     padding: 0px 30px;
     border-radius: 20px;
     justify-content: center;
+}
+
+@media(max-width:367px){
+    .home-content-box{
+        font-weight: 500;
+        font-size: 17px;
+    }
 }
