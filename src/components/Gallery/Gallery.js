@@ -43,7 +43,7 @@ const Gallery = () => {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
 
-      const response = await axios.post(`{URL}/gallery/add/new`, formDataToSend, {
+      const response = await axios.post(`${URL}/gallery/add/new`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
