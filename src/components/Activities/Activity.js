@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import "./Activities.css";
+const URL = `https://gaushala-backend.onrender.com`;
 
 const Activity = ({ blog, setChangeInActivity }) => {
 //   console.log(blog);
@@ -10,7 +11,7 @@ const Activity = ({ blog, setChangeInActivity }) => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.delete(
-        `http://localhost:8008/activity/delete?id=${id}`,
+        `${URL}/activity/delete?id=${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
