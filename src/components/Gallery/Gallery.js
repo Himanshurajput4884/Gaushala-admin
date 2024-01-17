@@ -4,6 +4,8 @@ import axios from 'axios';
 import GalleryImage from "./GalleryImage";
 import {ToastContainer, toast} from "react-toastify";
 
+const URL = `https://gaushala-backend.onrender.com`;
+
 const Gallery = () => {
   const [formData, setFormData] = useState({
     image: null,
@@ -14,7 +16,7 @@ const Gallery = () => {
   useEffect(()=>{
     const getImageData = async()=>{
       try{
-        const response = await axios.get(`http://localhost:8008/gallery/show/all`);
+        const response = await axios.get(`${URL}/gallery/show/all`);
         if(response.status === 200 && (response.data.message==="Fetch All Image")){
           setImageData(response.data.galleryImages);
         }
@@ -41,7 +43,7 @@ const Gallery = () => {
       const formDataToSend = new FormData();
       formDataToSend.append("image", formData.image);
 
-      const response = await axios.post("http://localhost:8008/gallery/add/new", formDataToSend, {
+      const response = await axios.post(`{URL}/gallery/add/new`, formDataToSend, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

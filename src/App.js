@@ -9,6 +9,8 @@ import axios from "axios";
 import NavBar from "./components/NavBar/NavBar";
 import SideNavBar from "./components/NavBar/prev-SideNavBar/SideNavbar.js";
 
+const URL = `https://gaushala-backend.onrender.com`;
+
 function App() {
   const [sideNavBarExpanded, setSideNavBarExpanded] = useState(false);
   const [token, setToken] = useState("");
@@ -30,7 +32,7 @@ function App() {
           return;
         }
         console.log(storedToken);
-        const response = await axios.get(`http://localhost:8008/verify/token`, {
+        const response = await axios.get(`${URL}/verify/token`, {
           headers: {
             Authorization: `Bearer ${storedToken}`,
           },

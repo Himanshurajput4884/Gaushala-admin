@@ -3,6 +3,7 @@ import "./Login.css";
 import { ToastContainer, toast } from "react-toastify";
 import { redirect, useNavigate } from "react-router-dom";
 import axios from "axios";
+const URL = `https://gaushala-backend.onrender.com`;
 
 const Login = ({ setIsLogin }) => {
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ const Login = ({ setIsLogin }) => {
       };
       console.log(inputData);
       const response = await axios.post(
-        `http://localhost:8008/admin/login`,
+        `${URL}/admin/login`,
         inputData
       );
       if (response.status === 200 && response.data.message === "admin login") {

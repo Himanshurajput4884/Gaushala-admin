@@ -4,6 +4,8 @@ import "./Activities.css";
 import Activity from "./Activity";
 import {ToastContainer, toast} from "react-toastify";
 
+const URL = `https://gaushala-backend.onrender.com`;
+
 const Activities = () => {
   const [formData, setFormData] = useState({
     title: "",
@@ -18,7 +20,7 @@ const Activities = () => {
   useEffect(()=>{
     const getBlogData = async()=>{
         try{
-            const response = await axios.get(`http://localhost:8008/activity/show/all`);
+            const response = await axios.get(`${URL}/activity/show/all`);
             if(response.status === 200 && (response.data.message === "Fetch All blogs")){
                 // console.log(response);
                 setBlogData(response.data.blogs);
@@ -60,7 +62,7 @@ const Activities = () => {
       formDataToSend.append("image", formData.image);
 
       const response = await axios.post(
-        "http://localhost:8008/activity/add/new",
+        `${URL}/activity/add/new`,
         formDataToSend,
         {
           headers: {
